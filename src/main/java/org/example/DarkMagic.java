@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class DarkMagic {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         String[] lines = {
                 "Welcome Traveler.",
@@ -29,6 +29,12 @@ public class DarkMagic {
         while (true) {
 
             String questionString = input.nextLine();
+            Thread.sleep(1000);
+            System.out.println("...");
+            Thread.sleep(1000);
+            System.out.println("...");
+            Thread.sleep(1000);
+            
             int randNumber = new Random().nextInt(5);
 
             if(questionString.equalsIgnoreCase("end")){
@@ -48,11 +54,9 @@ public class DarkMagic {
                 System.out.println("Very doubtful");
             }
 
+            Thread.sleep(1000);
+            System.out.println("");
             System.out.println("What else is on your mind?");
-
         }
-
     }
-};
-
-
+}
