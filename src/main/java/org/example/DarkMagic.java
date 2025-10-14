@@ -7,11 +7,13 @@ public class DarkMagic {
 
     public static void main(String[] args) throws InterruptedException {
 
+        Scanner input = new Scanner(System.in);
+
         String[] lines = {
                 "Welcome Traveler.",
                 "I can tell you have come from lands far away.",
                 "I can sense you have many questions.",
-                "Ask to your heart's content."
+                "Ask to your heart's content or type 'end' to go on your way."
         };
 
         for (String printedLines : lines) {
@@ -24,11 +26,14 @@ public class DarkMagic {
             }
         }
 
-        Scanner input = new Scanner(System.in);
-
         while (true) {
-
             String questionString = input.nextLine();
+
+            if(questionString.equalsIgnoreCase("end")){
+                System.out.println("It is becoming dark. Safe travels.");
+                break;
+            }
+
             Thread.sleep(1000);
             System.out.println("...");
             Thread.sleep(1000);
@@ -36,11 +41,6 @@ public class DarkMagic {
             Thread.sleep(1000);
             
             int randNumber = new Random().nextInt(5);
-
-            if(questionString.equalsIgnoreCase("end")){
-                System.out.println("It is becoming dark. Safe travels.");
-                break;
-            }
 
             if (randNumber == 0) {
                 System.out.println("Yes");
