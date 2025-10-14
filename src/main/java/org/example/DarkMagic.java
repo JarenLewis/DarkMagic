@@ -12,7 +12,7 @@ public class DarkMagic {
         String[] lines = {
                 "Welcome Traveler.",
                 "I can tell you have come from lands far away.",
-                "I can sense you have many questions.",
+                "I can sense you have many (yes or no) questions.",
                 "Ask to your heart's content or type 'end' to go on your way."
         };
 
@@ -39,7 +39,7 @@ public class DarkMagic {
             Thread.sleep(1000);
             System.out.println("...");
             Thread.sleep(1000);
-            
+
             int randNumber = new Random().nextInt(5);
 
             if (randNumber == 0) {
